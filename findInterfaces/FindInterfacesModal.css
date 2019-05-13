@@ -1,0 +1,17 @@
+.findInterfaceModalContent {
+  min-height: 400px;
+  padding: 0;
+  position: relative;
+
+  & [class^="paneset--"] {
+    height: 390px;
+  }
+
+  & [class^="mclRowContainer--"] {
+    max-width: 100%;
+
+    & div {
+      max-width: 100%;
+    }
+  }
+}
