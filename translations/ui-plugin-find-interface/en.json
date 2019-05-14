@@ -8,6 +8,13 @@
   "interface.name": "Name",
   "interface.url": "URL",
   "interface.notes": "Notes",
+  "interface.type": "Type",
+  "interface.type.admin": "Admin",
+  "interface.type.endUser": "End user",
+  "interface.type.reports": "Reports",
+  "interface.type.orders": "Orders",
+  "interface.type.invoices": "Invoices",
+  "interface.type.other": "Other",
 
   "modal.title": "Add interfaces",
   "modal.totalSelected": "Total selected: {count}"

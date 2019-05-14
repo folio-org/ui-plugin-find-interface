@@ -7,7 +7,10 @@ import {
   pickBy,
 } from 'lodash';
 
-import { SearchAndSort } from '@folio/stripes/smart-components';
+import {
+  SearchAndSort,
+  makeQueryFunction,
+} from '@folio/stripes/smart-components';
 import {
   Modal,
   Button,
@@ -16,10 +19,19 @@ import {
 
 import packageInfo from '../package';
 
+import { FILTERS } from './constants';
+import FindInterfacesFilters from './FindInterfacesFilters';
 import css from './FindInterfacesModal.css';
 
 const INITIAL_RESULT_COUNT = 30;
 const RESULT_COUNT_INCREMENT = 30;
+const filterConfig = [
+  {
+    name: FILTERS.TYPE,
+    cql: FILTERS.TYPE,
+    values: [],
+  },
+];
 
 const visibleColumns = ['isChecked', 'name', 'uri', 'notes'];
 const columnWidths = {
@@ -49,6 +61,17 @@ class FindInterfacesModal extends React.Component {
       clear: true,
       recordsRequired: '%{resultCount}',
       perRequest: RESULT_COUNT_INCREMENT,
+      GET: {
+        params: {
+          query: makeQueryFunction(
+            'cql.allRecords=1',
+            '(name="*%{query.query}*" or uri="*%{query.query}*" or notes="*%{query.query}*")',
+            {},
+            filterConfig,
+          ),
+        },
+        staticFallback: { params: {} },
+      },
     },
     resultCount: { initialValue: INITIAL_RESULT_COUNT },
   });
@@ -60,6 +83,44 @@ class FindInterfacesModal extends React.Component {
 
   closeModal = () => {
     this.props.onCloseModal();
+  }
+
+  getActiveFilters = () => {
+    const { query } = this.props.resources;
+
+    if (!query || !query.filters) return {};
+
+    return query.filters
+      .split(',')
+      .reduce((filterMap, currentFilter) => {
+        const [name, value] = currentFilter.split('.');
+
+        if (!Array.isArray(filterMap[name])) {
+          filterMap[name] = [];
+        }
+
+        filterMap[name].push(value);
+
+        return filterMap;
+      }, {});
+  }
+
+  handleFilterChange = ({ name, values }) => {
+    const newFilters = {
+      ...this.getActiveFilters(),
+      [name]: values,
+    };
+
+    const filters = Object.keys(newFilters)
+      .map((filterName) => {
+        return newFilters[filterName]
+          .map((filterValue) => `${filterName}.${filterValue}`)
+          .join(',');
+      })
+      .filter(filter => filter)
+      .join(',');
+
+    this.props.mutator.query.update({ filters });
   }
 
   onSelectRow = (e, inface) => {
@@ -92,6 +153,15 @@ class FindInterfacesModal extends React.Component {
         isAllChecked,
       };
     });
+  }
+
+  renderFilters = (onChange) => {
+    return (
+      <FindInterfacesFilters
+        activeFilters={this.getActiveFilters()}
+        onChange={onChange}
+      />
+    );
   }
 
   render() {
@@ -171,7 +241,8 @@ class FindInterfacesModal extends React.Component {
           resultCountIncrement={RESULT_COUNT_INCREMENT}
           parentResources={resources}
           parentMutator={mutator}
-          filterConfig={[]}
+          onFilterChange={this.handleFilterChange}
+          renderFilters={this.renderFilters}
           stripes={stripes}
           viewRecordComponent={noop}
           disableRecordCreation
