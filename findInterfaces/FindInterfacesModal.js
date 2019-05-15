@@ -175,6 +175,7 @@ class FindInterfacesModal extends React.Component {
         <Checkbox
           checked={isAllChecked}
           onChange={this.selectAll}
+          data-test-find-interfaces-modal-select-all
           type="checkbox"
         />
       ),
@@ -209,6 +210,7 @@ class FindInterfacesModal extends React.Component {
         </div>
         <Button
           marginBottom0
+          data-test-find-interfaces-modal-save
           onClick={this.save}
           disabled={!checkedInterfacesListLength}
           buttonStyle="primary"

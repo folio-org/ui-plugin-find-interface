@@ -1,4 +1,6 @@
-// eslint-disable-next-line import/prefer-default-export
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+
 export const FILTERS = {
   TYPE: 'type',
 };
@@ -6,26 +8,26 @@ export const FILTERS = {
 export const TYPES = [
   {
     value: 'Admin',
-    labelId: 'ui-plugin-find-interface.interface.type.admin',
+    label: <FormattedMessage id="ui-plugin-find-interface.interface.type.admin" />,
   },
   {
     value: 'End user',
-    labelId: 'ui-plugin-find-interface.interface.type.endUser',
+    label: <FormattedMessage id="ui-plugin-find-interface.interface.type.endUser" />,
   },
   {
     value: 'Reports',
-    labelId: 'ui-plugin-find-interface.interface.type.reports',
+    label: <FormattedMessage id="ui-plugin-find-interface.interface.type.reports" />,
   },
   {
     value: 'Orders',
-    labelId: 'ui-plugin-find-interface.interface.type.orders',
+    label: <FormattedMessage id="ui-plugin-find-interface.interface.type.orders" />,
   },
   {
     value: 'Invoices',
-    labelId: 'ui-plugin-find-interface.interface.type.invoices',
+    label: <FormattedMessage id="ui-plugin-find-interface.interface.type.invoices" />,
   },
   {
     value: 'Other',
-    labelId: 'ui-plugin-find-interface.interface.type.other',
+    label: <FormattedMessage id="ui-plugin-find-interface.interface.type.other" />,
   },
 ];
