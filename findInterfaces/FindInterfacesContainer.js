@@ -50,6 +50,7 @@ class FindInterfacesContainer extends React.Component {
     return (
       <div className={this.getStyle()}>
         <Button
+          data-test-plugin-find-interfaces-button
           buttonStyle={searchButtonStyle}
           disabled={disabled}
           key="searchButton"

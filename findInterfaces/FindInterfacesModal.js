@@ -57,6 +57,7 @@ class FindInterfacesModal extends React.Component {
     records: {
       type: 'okapi',
       records: 'interfaces',
+      // TODO: use constants from organizations
       path: 'organizations-storage/interfaces',
       clear: true,
       recordsRequired: '%{resultCount}',
@@ -219,7 +220,7 @@ class FindInterfacesModal extends React.Component {
 
     return (
       <Modal
-        data-test-find-interface-modal
+        data-test-find-interfaces-modal
         dismissible
         enforceFocus={false}
         footer={footer}
