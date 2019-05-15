@@ -35,7 +35,10 @@ const filterConfig = [
 
 const visibleColumns = ['isChecked', 'name', 'uri', 'notes'];
 const columnWidths = {
-  isChecked: '35',
+  isChecked: '8%',
+  name: '20%',
+  uri: '32%',
+  notes: '40%',
 };
 
 const reduceInterfacesToMap = (interfaces, isChecked = false) => {
