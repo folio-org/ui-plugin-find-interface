@@ -24,10 +24,7 @@ class FindInterfacesFilters extends Component {
   onChangeTypeFilter = type => this.props.onChange({ name: FILTERS.TYPE, values: [type] });
 
   renderTypeFilter = () => {
-    const dataOptions = TYPES.map(({ value, labelId }) => ({
-      label: <FormattedMessage id={labelId} />,
-      value,
-    }));
+    const dataOptions = TYPES;
 
     const activeFilters = this.props.activeFilters.type || [];
 
