@@ -45,6 +45,7 @@ class FindInterfacesContainer extends React.Component {
       marginBottom0,
       stripes,
       addInterfaces,
+      renderNewInterfaceBtn,
     } = this.props;
 
     return (
@@ -65,6 +66,7 @@ class FindInterfacesContainer extends React.Component {
             onCloseModal={this.closeModal}
             stripes={stripes}
             addInterfaces={addInterfaces}
+            renderNewInterfaceBtn={renderNewInterfaceBtn}
           />
         )}
       </div>
@@ -81,6 +83,7 @@ FindInterfacesContainer.propTypes = {
   stripes: PropTypes.object,
   dataKey: PropTypes.string.isRequired,
   addInterfaces: PropTypes.func,
+  renderNewInterfaceBtn: PropTypes.func,
 };
 
 FindInterfacesContainer.defaultProps = {
@@ -90,6 +93,7 @@ FindInterfacesContainer.defaultProps = {
   searchButtonStyle: 'primary',
   searchLabel: <FormattedMessage id="ui-plugin-find-interface.button.addInterface" />,
   addInterfaces: noop,
+  renderNewInterfaceBtn: noop,
 };
 
 export default FindInterfacesContainer;

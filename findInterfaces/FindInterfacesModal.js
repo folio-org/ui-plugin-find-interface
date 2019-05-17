@@ -169,7 +169,7 @@ class FindInterfacesModal extends React.Component {
   }
 
   render() {
-    const { resources, mutator, stripes } = this.props;
+    const { resources, mutator, stripes, renderNewInterfaceBtn = noop } = this.props;
     const { checkedInterfacesMap, isAllChecked } = this.state;
 
     const checkedInterfacesListLength = Object.values(pickBy(checkedInterfacesMap)).length;
@@ -236,27 +236,32 @@ class FindInterfacesModal extends React.Component {
         style={{ minHeight: '500px' }}
         size="large"
       >
-        <SearchAndSort
-          packageInfo={this.props.packageInfo || packageInfo}
-          objectName="interface"
-          visibleColumns={visibleColumns}
-          columnMapping={columnMapping}
-          columnWidths={columnWidths}
-          resultsFormatter={resultsFormatter}
-          initialResultCount={INITIAL_RESULT_COUNT}
-          resultCountIncrement={RESULT_COUNT_INCREMENT}
-          parentResources={resources}
-          parentMutator={mutator}
-          onFilterChange={this.handleFilterChange}
-          renderFilters={this.renderFilters}
-          stripes={stripes}
-          viewRecordComponent={noop}
-          disableRecordCreation
-          browseOnly
-          showSingleResult
-          onSelectRow={this.onSelectRow}
-          viewRecordPerms=""
-        />
+        <React.Fragment>
+          <div className={css.findInterfaceModalNewBtnWrapper}>
+            {renderNewInterfaceBtn()}
+          </div>
+          <SearchAndSort
+            packageInfo={this.props.packageInfo || packageInfo}
+            objectName="interface"
+            visibleColumns={visibleColumns}
+            columnMapping={columnMapping}
+            columnWidths={columnWidths}
+            resultsFormatter={resultsFormatter}
+            initialResultCount={INITIAL_RESULT_COUNT}
+            resultCountIncrement={RESULT_COUNT_INCREMENT}
+            parentResources={resources}
+            parentMutator={mutator}
+            onFilterChange={this.handleFilterChange}
+            renderFilters={this.renderFilters}
+            stripes={stripes}
+            viewRecordComponent={noop}
+            disableRecordCreation
+            browseOnly
+            showSingleResult
+            onSelectRow={this.onSelectRow}
+            viewRecordPerms=""
+          />
+        </React.Fragment>
       </Modal>
     );
   }
@@ -269,6 +274,7 @@ FindInterfacesModal.propTypes = {
   resources: PropTypes.object.isRequired,
   onCloseModal: PropTypes.func.isRequired,
   addInterfaces: PropTypes.func.isRequired,
+  renderNewInterfaceBtn: PropTypes.func,
 };
 
 export default FindInterfacesModal;

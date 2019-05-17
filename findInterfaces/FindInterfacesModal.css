@@ -18,6 +18,12 @@
       word-break: break-word;
     }
   }
+
+  & .findInterfaceModalNewBtnWrapper {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+  }
 }
 
 .findInterfaceModalFooter {
