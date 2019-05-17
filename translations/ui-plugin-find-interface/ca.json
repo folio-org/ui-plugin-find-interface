@@ -5,5 +5,14 @@
     "interface.name": "Name",
     "interface.url": "URL",
     "interface.notes": "Notes",
-    "modal.title": "Add interfaces"
+    "modal.title": "Add interfaces",
+    "button.save": "Save",
+    "modal.totalSelected": "Total selected: {count}",
+    "interface.type": "Type",
+    "interface.type.admin": "Admin",
+    "interface.type.endUser": "End user",
+    "interface.type.reports": "Reports",
+    "interface.type.orders": "Orders",
+    "interface.type.invoices": "Invoices",
+    "interface.type.other": "Other"
 }

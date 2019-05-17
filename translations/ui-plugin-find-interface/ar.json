@@ -1,9 +1,18 @@
 {
-    "button.addInterface": "Add interface",
-    "meta.title": "Interfaces",
-    "button.close": "Close",
-    "interface.name": "Name",
-    "interface.url": "URL",
-    "interface.notes": "Notes",
-    "modal.title": "Add interfaces"
+    "button.addInterface": "إضافة واجهة",
+    "meta.title": "واجهات",
+    "button.close": "إغلاق",
+    "interface.name": "الاسم",
+    "interface.url": "عنوان URL",
+    "interface.notes": "ملاحظات",
+    "modal.title": "إضافة واجهات",
+    "button.save": "حفظ",
+    "modal.totalSelected": "إجمالي المحدد: {count}",
+    "interface.type": "النوع",
+    "interface.type.admin": "المشرف",
+    "interface.type.endUser": "المستخدم النهائي",
+    "interface.type.reports": "التقارير",
+    "interface.type.orders": "طلبيات",
+    "interface.type.invoices": "الفواتير",
+    "interface.type.other": "أخرى"
 }
