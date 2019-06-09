@@ -8,11 +8,11 @@
     "modal.title": "Add interfaces",
     "button.save": "Save",
     "modal.totalSelected": "Total selected: {count}",
-    "interface.type": "Type",
-    "interface.type.admin": "Admin",
-    "interface.type.endUser": "End user",
-    "interface.type.reports": "Reports",
-    "interface.type.orders": "Orders",
-    "interface.type.invoices": "Invoices",
-    "interface.type.other": "Other"
+    "interface.type": "Tipo",
+    "interface.type.admin": "Administración",
+    "interface.type.endUser": "Usuario final",
+    "interface.type.reports": "Informes",
+    "interface.type.orders": "Pedidos",
+    "interface.type.invoices": "Facturas",
+    "interface.type.other": "Otros"
 }
