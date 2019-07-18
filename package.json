@@ -11,10 +11,10 @@
     "node": ">=8.9.4"
   },
   "stripes": {
-    "type": "plugin",
+    "actsAs": ["plugin"],
     "pluginType": "find-interface",
     "okapiInterfaces": {
-      "organizations-storage.interfaces": "1.1"
+      "organizations-storage.interfaces": "1.1 2.0"
     },
     "displayName": "ui-plugin-find-interface.meta.title"
   },
