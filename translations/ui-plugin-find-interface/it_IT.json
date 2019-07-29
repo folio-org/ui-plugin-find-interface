@@ -8,7 +8,7 @@
     "modal.title": "Add interfaces",
     "button.save": "Save",
     "modal.totalSelected": "Total selected: {count}",
-    "interface.type": "Type",
+    "interface.type": "Tipologia",
     "interface.type.admin": "Admin",
     "interface.type.endUser": "End user",
     "interface.type.reports": "Reports",
