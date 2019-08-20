@@ -1,98 +1,132 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import className from 'classnames';
+import { get } from 'lodash';
 import { FormattedMessage } from 'react-intl';
-import { noop } from 'lodash';
 
-import { Button } from '@folio/stripes/components';
+import {
+  makeQueryFunction,
+  StripesConnectedSource,
+} from '@folio/stripes/smart-components';
+import { stripesConnect } from '@folio/stripes/core';
 
-import FindInterfacesModal from './FindInterfacesModal';
-import css from './FindInterfacesContainer.css';
+import filterConfig from './filterConfig';
+
+const INITIAL_RESULT_COUNT = 30;
+const RESULT_COUNT_INCREMENT = 30;
+const columnWidths = {
+  isChecked: '8%',
+  name: '20%',
+  uri: '32%',
+  notes: '40%',
+};
+const visibleColumns = ['name', 'uri', 'notes'];
+const columnMapping = {
+  name: <FormattedMessage id="ui-plugin-find-interface.interface.name" />,
+  uri: <FormattedMessage id="ui-plugin-find-interface.interface.url" />,
+  notes: <FormattedMessage id="ui-plugin-find-interface.interface.notes" />,
+};
+const idPrefix = 'uiPluginFindInterfaces-';
+const modalLabel = <FormattedMessage id="ui-plugin-find-interface.modal.title" />;
 
 class FindInterfacesContainer extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.connectedFindInterfacesModal = props.stripes.connect(FindInterfacesModal, { dataKey: this.props.dataKey });
-  }
-
-  state = {
-    openModal: false,
-  }
-
-  getStyle() {
-    const { marginTop0 } = this.props;
-
-    return className(
-      css.searchControl,
-      { [css.marginTop0]: marginTop0 },
-    );
-  }
-
-  openModal = () => this.setState({
-    openModal: true,
+  static manifest = Object.freeze({
+    query: {
+      initialValue: {
+        query: '',
+        filters: '',
+      },
+    },
+    records: {
+      throwErrors: false,
+      type: 'okapi',
+      records: 'interfaces',
+      path: 'organizations-storage/interfaces',
+      clear: true,
+      recordsRequired: '%{resultCount}',
+      perRequest: RESULT_COUNT_INCREMENT,
+      GET: {
+        params: {
+          query: makeQueryFunction(
+            'cql.allRecords=1',
+            '(name="%{query.query}*" or uri="%{query.query}*" or notes="%{query.query}*")',
+            {},
+            filterConfig,
+          ),
+        },
+        staticFallback: { params: {} },
+      },
+    },
+    resultCount: { initialValue: INITIAL_RESULT_COUNT },
   });
 
-  closeModal = () => this.setState({
-    openModal: false,
-  });
+  constructor(props, context) {
+    super(props, context);
+
+    this.logger = props.stripes.logger;
+    this.log = this.logger.log.bind(this.logger);
+  }
+
+  componentDidMount() {
+    this.source = new StripesConnectedSource(this.props, this.logger);
+    this.props.mutator.query.replace('');
+  }
+
+  componentDidUpdate() {
+    this.source.update(this.props);
+  }
+
+  onNeedMoreData = () => {
+    if (this.source) {
+      this.source.fetchMore(RESULT_COUNT_INCREMENT);
+    }
+  };
+
+  querySetter = ({ nsValues, state }) => {
+    if (/reset/.test(state.changeType)) {
+      this.props.mutator.query.replace(nsValues);
+    } else {
+      this.props.mutator.query.update(nsValues);
+    }
+  }
+
+  queryGetter = () => {
+    return get(this.props.resources, 'query', {});
+  }
 
   render() {
     const {
-      disabled,
-      searchButtonStyle,
-      searchLabel,
-      marginBottom0,
-      stripes,
-      addInterfaces,
-      renderNewInterfaceBtn,
+      resources,
+      children,
     } = this.props;
 
-    return (
-      <div className={this.getStyle()}>
-        <Button
-          data-test-plugin-find-interfaces-button
-          buttonStyle={searchButtonStyle}
-          disabled={disabled}
-          key="searchButton"
-          marginBottom0={marginBottom0}
-          onClick={this.openModal}
-        >
-          {searchLabel}
-        </Button>
-        {this.state.openModal && (
-          <this.connectedFindInterfacesModal
-            onCloseModal={this.closeModal}
-            stripes={stripes}
-            addInterfaces={addInterfaces}
-            renderNewInterfaceBtn={renderNewInterfaceBtn}
-          />
-        )}
-      </div>
-    );
+    if (this.source) {
+      this.source.update(this.props);
+    }
+
+    return children({
+      initialSearch: '?sort=name',
+      onNeedMoreData: this.onNeedMoreData,
+      queryGetter: this.queryGetter,
+      querySetter: this.querySetter,
+      source: this.source,
+      columnMapping,
+      columnWidths,
+      filterConfig,
+      idPrefix,
+      modalLabel,
+      visibleColumns,
+      data: {
+        records: get(resources, 'records.records', []),
+      },
+    });
   }
 }
 
 FindInterfacesContainer.propTypes = {
-  disabled: PropTypes.bool,
-  marginBottom0: PropTypes.bool,
-  marginTop0: PropTypes.bool,
-  searchButtonStyle: PropTypes.string,
-  searchLabel: PropTypes.node,
-  stripes: PropTypes.object,
-  dataKey: PropTypes.string.isRequired,
-  addInterfaces: PropTypes.func,
-  renderNewInterfaceBtn: PropTypes.func,
+  stripes: PropTypes.object.isRequired,
+  children: PropTypes.func,
+  mutator: PropTypes.object.isRequired,
+  resources: PropTypes.object.isRequired,
 };
 
-FindInterfacesContainer.defaultProps = {
-  disabled: false,
-  marginBottom0: true,
-  marginTop0: true,
-  searchButtonStyle: 'primary',
-  searchLabel: <FormattedMessage id="ui-plugin-find-interface.button.addInterface" />,
-  addInterfaces: noop,
-  renderNewInterfaceBtn: noop,
-};
-
-export default FindInterfacesContainer;
+export default stripesConnect(FindInterfacesContainer, { dataKey: 'find_interface' });

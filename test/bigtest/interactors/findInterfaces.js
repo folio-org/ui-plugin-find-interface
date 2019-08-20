@@ -8,24 +8,24 @@ import {
 } from '@bigtest/interactor';
 
 @interactor class PluginModalInteractor {
-  static defaultScope = '[data-test-find-interfaces-modal]';
+  static defaultScope = '[data-test-find-records-modal]';
 
-  instances = collection('[role=row] a', {
-    click: clickable(),
+  instances = collection('[role=group] [role=row]', {
+    click: clickable('input[type="checkbox"]'),
   });
 
-  save = scoped('[data-test-find-interfaces-modal-save]', {
+  save = scoped('[data-test-find-records-modal-save]', {
     click: clickable(),
     isDisabled: property('disabled'),
   });
 
-  selectAll = scoped('[data-test-find-interfaces-modal-select-all]', {
+  selectAll = scoped('[data-test-find-records-modal-select-all]', {
     click: clickable(),
   });
 }
 
-@interactor class FindContactInteractor {
-  button = scoped('[data-test-plugin-find-interfaces-button]', {
+@interactor class FindInterfaceInteractor {
+  button = scoped('[data-test-plugin-find-record-button]', {
     click: clickable(),
     isFocused: is(':focus'),
   });
@@ -33,4 +33,4 @@ import {
   modal = new PluginModalInteractor();
 }
 
-export default FindContactInteractor;
+export default FindInterfaceInteractor;

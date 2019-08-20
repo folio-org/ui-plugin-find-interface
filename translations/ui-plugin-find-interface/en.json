@@ -2,9 +2,6 @@
   "button.addInterface": "Add interface",
   "meta.title": "Interfaces",
 
-  "button.close": "Close",
-  "button.save": "Save",
-
   "interface.name": "Name",
   "interface.url": "URL",
   "interface.notes": "Notes",
