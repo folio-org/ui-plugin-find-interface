@@ -69,7 +69,7 @@ class FindInterfacesModal extends React.Component {
         params: {
           query: makeQueryFunction(
             'cql.allRecords=1',
-            '(name="*%{query.query}*" or uri="*%{query.query}*" or notes="*%{query.query}*")',
+            '(name="%{query.query}*" or uri="%{query.query}*" or notes="%{query.query}*")',
             {},
             filterConfig,
           ),
