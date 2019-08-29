@@ -1,1 +1,1 @@
-export { default } from './FindInterfacesContainer';
+export { default } from './PluginFindInterfaces';
