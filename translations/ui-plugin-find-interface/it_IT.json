@@ -1,12 +1,10 @@
 {
     "button.addInterface": "Add interface",
     "meta.title": "Interfaces",
-    "button.close": "Close",
     "interface.name": "Name",
     "interface.url": "URL",
     "interface.notes": "Notes",
     "modal.title": "Add interfaces",
-    "button.save": "Save",
     "modal.totalSelected": "Total selected: {count}",
     "interface.type": "Tipologia",
     "interface.type.admin": "Admin",

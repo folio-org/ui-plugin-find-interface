@@ -1,12 +1,10 @@
 {
     "button.addInterface": "Adicionar interface",
     "meta.title": "Interfaces",
-    "button.close": "Fechar",
     "interface.name": "Nome",
     "interface.url": "URL",
     "interface.notes": "Notas",
     "modal.title": "Adicionar interfaces",
-    "button.save": "Salvar",
     "modal.totalSelected": "Total selecionado: {count}",
     "interface.type": "Tipo",
     "interface.type.admin": "Admin",
