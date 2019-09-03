@@ -1,12 +1,10 @@
 {
     "button.addInterface": "إضافة واجهة",
     "meta.title": "واجهات",
-    "button.close": "إغلاق",
     "interface.name": "الاسم",
     "interface.url": "عنوان URL",
     "interface.notes": "ملاحظات",
     "modal.title": "إضافة واجهات",
-    "button.save": "حفظ",
     "modal.totalSelected": "إجمالي المحدد: {count}",
     "interface.type": "النوع",
     "interface.type.admin": "المشرف",
