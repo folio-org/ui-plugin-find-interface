@@ -1,5 +1,11 @@
 # Change history for ui-plugin-find-interface
 
+## [1.2.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v1.2.0) (2019-09-11)
+[Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v1.1.0...v1.2.0)
+
+* [UIORGS-87](https://issues.folio.org/browse/UIORGS-87) Fix checkboxes glitch;
+* [UIORGS-88](https://issues.folio.org/browse/UIORGS-88) Unable to search for interfaces;
+
 ## [1.1.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v1.1.0) (2019-07-23)
 [Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v1.0.0...v1.1.0)
 
