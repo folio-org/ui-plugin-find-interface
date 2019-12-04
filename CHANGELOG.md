@@ -1,5 +1,10 @@
 # Change history for ui-plugin-find-interface
 
+## [1.3.1](https://github.com/folio-org/ui-plugin-find-interface/tree/v1.3.1) (2019-12-04)
+[Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v1.3.0...v1.3.1)
+
+* bump plugin-find-interface version
+
 ## [1.3.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v1.3.0) (2019-12-04)
 [Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v1.2.0...v1.3.0)
 
