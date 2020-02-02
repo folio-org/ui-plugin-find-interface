@@ -1,16 +1,16 @@
 {
-    "button.addInterface": "Add interface",
+    "button.addInterface": "Aggiungi interfaccia",
     "meta.title": "Interfacce",
     "interface.name": "Nome",
     "interface.url": "URL",
     "interface.notes": "Note",
-    "modal.title": "Add interfaces",
-    "modal.totalSelected": "Total selected: {count}",
+    "modal.title": "Aggiungi interfacce",
+    "modal.totalSelected": "Totale selezionato: {count}",
     "interface.type": "Tipologia",
     "interface.type.admin": "Admin",
-    "interface.type.endUser": "End user",
-    "interface.type.reports": "Reports",
-    "interface.type.orders": "Orders",
+    "interface.type.endUser": "Utente",
+    "interface.type.reports": "Rapporti",
+    "interface.type.orders": "Ordini",
     "interface.type.invoices": "Fatture",
-    "interface.type.other": "Other"
+    "interface.type.other": "Altro"
 }
