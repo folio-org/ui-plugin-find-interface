@@ -1,5 +1,13 @@
 # Change history for ui-plugin-find-interface
 
+## [2.0.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v2.0.0) (2020-03-13)
+[Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v1.3.1...v2.0.0)
+
+* bump the @folio/stripes peer to v3.0.0
+
+### Bug Fixes
+* [UIPFINT-4](https://issues.folio.org/browse/UIPFINT-4) Security update eslint to >= 6.2.1 or eslint-util >= 1.4.1
+
 ## [1.3.1](https://github.com/folio-org/ui-plugin-find-interface/tree/v1.3.1) (2019-12-04)
 [Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v1.3.0...v1.3.1)
 
