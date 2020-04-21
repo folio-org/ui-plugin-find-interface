@@ -1,16 +1,16 @@
 {
-    "button.addInterface": "Add interface",
+    "button.addInterface": "インターフェースを追加",
     "meta.title": "インターフェース",
-    "interface.name": "Name",
+    "interface.name": "名称",
     "interface.url": "URL",
-    "interface.notes": "Notes",
+    "interface.notes": "ノート",
     "modal.title": "Add interfaces",
     "modal.totalSelected": "Total selected: {count}",
-    "interface.type": "Type",
+    "interface.type": "種類",
     "interface.type.admin": "Admin",
     "interface.type.endUser": "End user",
     "interface.type.reports": "Reports",
-    "interface.type.orders": "Orders",
+    "interface.type.orders": "発注",
     "interface.type.invoices": "Invoices",
-    "interface.type.other": "Other"
+    "interface.type.other": "その他"
 }
