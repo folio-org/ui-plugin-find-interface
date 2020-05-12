@@ -21,6 +21,7 @@ yarn.lock
 **/.sass-cache/*
 **/.css.map/*
 **/node_modules/*
+node_modules/
 *.idea*
 *.DS_Store
 *.vscode
