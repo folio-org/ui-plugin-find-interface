@@ -2,6 +2,9 @@
 
 ## (IN PROGRESS)
 
+### Stories
+* [UIPFINT-6](https://issues.folio.org/browse/UIPFINT-6) Sort order should be Name (A to Z)
+
 ## [2.1.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v2.1.0) (2020-06-11)
 [Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v2.0.0...v2.1.0)
 
