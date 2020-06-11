@@ -1,6 +1,10 @@
 # Change history for ui-plugin-find-interface
 
 ## (IN PROGRESS)
+
+## [2.1.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v2.1.0) (2020-06-11)
+[Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v2.0.0...v2.1.0)
+
 ### Stories
 * [UIPFINT-8](https://issues.folio.org/browse/UIPFINT-8) ui-plugin-find-interface: Update to Stripes v4
 
