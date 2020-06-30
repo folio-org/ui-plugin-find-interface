@@ -3,6 +3,7 @@
 ## (IN PROGRESS)
 
 ### Stories
+* [UISACQCOMP-3](https://issues.folio.org/browse/UISACQCOMP-3) Handle import of stripes-acq-components to modules and platform
 * [UIPFINT-6](https://issues.folio.org/browse/UIPFINT-6) Sort order should be Name (A to Z)
 
 ## [2.1.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v2.1.0) (2020-06-11)
