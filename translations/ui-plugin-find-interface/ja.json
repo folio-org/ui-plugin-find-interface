@@ -5,7 +5,7 @@
     "interface.url": "URL",
     "interface.notes": "ノート",
     "modal.title": "Add interfaces",
-    "modal.totalSelected": "Total selected: {count}",
+    "modal.totalSelected": "選択済合計： {count}",
     "interface.type": "種類",
     "interface.type.admin": "Admin",
     "interface.type.endUser": "End user",
