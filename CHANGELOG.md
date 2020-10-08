@@ -2,6 +2,8 @@
 
 ## (IN PROGRESS)
 
+* Fix filter by type. Refs UIPFINT-12.
+
 ### Stories
 * [UISACQCOMP-3](https://issues.folio.org/browse/UISACQCOMP-3) Handle import of stripes-acq-components to modules and platform
 * [UIPFINT-6](https://issues.folio.org/browse/UIPFINT-6) Sort order should be Name (A to Z)

@@ -6,6 +6,7 @@ const filterConfig = [
     label: <FormattedMessage id="ui-plugin-find-interface.interface.type" />,
     name: 'type',
     cql: 'type',
+    operator: '=',
     values: [
       {
         name: 'Admin',
