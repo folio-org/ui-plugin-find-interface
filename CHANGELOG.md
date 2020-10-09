@@ -2,7 +2,11 @@
 
 ## (IN PROGRESS)
 
+## [2.2.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v2.2.0) (2020-10-09)
+[Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v2.1.0...v2.2.0)
+
 * Fix filter by type. Refs UIPFINT-12.
+* bump the @folio/stripes peer to v5.0.0
 
 ### Stories
 * [UISACQCOMP-3](https://issues.folio.org/browse/UISACQCOMP-3) Handle import of stripes-acq-components to modules and platform
