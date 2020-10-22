@@ -23,7 +23,7 @@ const PluginFindInterfaces = ({ addInterfaces, isMultiSelect, renderNewInterface
             {...modalProps}
             isMultiSelect={isMultiSelect}
             renderNewBtn={renderNewInterfaceBtn}
-            checkboxAriaLabelKey="name"
+            getRecordLabel={({ name }) => name}
           />
         )}
       </FindInterfacesContainer>
