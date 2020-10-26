@@ -2,6 +2,8 @@
 
 ## (IN PROGRESS)
 
+* Interfaces list - add aria-label to select item checkbox. Refs UIPFINT-14.
+
 ## [2.2.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v2.2.0) (2020-10-09)
 [Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v2.1.0...v2.2.0)
 
