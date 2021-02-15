@@ -8,7 +8,7 @@
     "modal.totalSelected": "Insgesamt ausgewählt: {count}",
     "interface.type": "Typ",
     "interface.type.admin": "Admin",
-    "interface.type.endUser": "End user",
+    "interface.type.endUser": "Endbenutzer/-in",
     "interface.type.reports": "Berichte",
     "interface.type.orders": "Bestellungen",
     "interface.type.invoices": "Rechnungen",
