@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-find-interface",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "Find and select interfaces plugin for Stripes",
   "repository": "folio-org/ui-plugin-find-interface",
   "publishConfig": {
@@ -60,7 +60,7 @@
     "regenerator-runtime": "^0.13.3"
   },
   "dependencies": {
-    "@folio/stripes-acq-components": "^2.2.0",
+    "@folio/stripes-acq-components": "~2.3.0",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.0"
   },
