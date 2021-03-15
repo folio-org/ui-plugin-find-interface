@@ -2,6 +2,7 @@
 
 ## (IN PROGRESS)
 
+* UI tests replacement with RTL/Jest.Refs FAT-44.
 * Add personal data disclosure form. Refs UIPFINT-18.
 
 ## [2.2.1](https://github.com/folio-org/ui-plugin-find-interface/tree/v2.2.1) (2020-10-29)
