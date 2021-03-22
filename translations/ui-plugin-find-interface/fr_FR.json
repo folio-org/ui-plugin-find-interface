@@ -3,7 +3,7 @@
     "meta.title": "Interfaces",
     "interface.name": "Nom",
     "interface.url": "URL",
-    "interface.notes": "Commentaires",
+    "interface.notes": "Notes",
     "modal.title": "Ajouter des interfaces",
     "modal.totalSelected": "Total sélectionné: {count}",
     "interface.type": "Type",
