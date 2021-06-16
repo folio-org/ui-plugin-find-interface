@@ -1,6 +1,10 @@
 # Change history for ui-plugin-find-interface
 
 ## (IN PROGRESS)
+
+## [2.4.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v2.4.0) (2021-06-16)
+[Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v2.3.0...v2.4.0)
+
 * Compile Translation Files into AST Format. Refs UIPFINT-22.
 
 ## [2.3.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v2.3.0) (2021-03-15)
