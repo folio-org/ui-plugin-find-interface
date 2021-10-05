@@ -2,6 +2,9 @@
 
 ## (IN PROGRESS)
 
+## [3.0.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v3.0.0) (2021-10-05)
+[Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v2.4.1...v3.0.0)
+
 * increment stripes to v7. Refs UIPFINT-23.
 
 ## [2.4.1](https://github.com/folio-org/ui-plugin-find-interface/tree/v2.4.1) (2021-06-16)
