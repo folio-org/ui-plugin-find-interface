@@ -2,6 +2,8 @@
 
 ## (IN PROGRESS)
 
+* Replace `babel-eslint` with `@babel/eslint-parser`. Refs UIPFINT-28.
+
 ## [3.1.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v3.1.0) (2022-03-01)
 [Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v3.0.0...v3.1.0)
 
