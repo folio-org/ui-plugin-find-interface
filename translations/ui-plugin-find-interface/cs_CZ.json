@@ -10,7 +10,7 @@
     "interface.type.admin": "Admin",
     "interface.type.endUser": "End user",
     "interface.type.reports": "Reports",
-    "interface.type.orders": "Orders",
-    "interface.type.invoices": "Invoices",
+    "interface.type.orders": "Objednávky",
+    "interface.type.invoices": "Faktury",
     "interface.type.other": "Other"
 }
