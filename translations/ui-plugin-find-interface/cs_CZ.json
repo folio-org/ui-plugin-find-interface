@@ -4,7 +4,7 @@
     "interface.name": "Název",
     "interface.url": "URL",
     "interface.notes": "Poznámky",
-    "modal.title": "Přidejte rozhraní",
+    "modal.title": "Přidat rozhraní",
     "modal.totalSelected": "Celkem vybráno: {count}",
     "interface.type": "Typ",
     "interface.type.admin": "Správce",
