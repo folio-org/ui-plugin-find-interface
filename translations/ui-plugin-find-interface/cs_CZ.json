@@ -9,7 +9,7 @@
     "interface.type": "Typ",
     "interface.type.admin": "Správce",
     "interface.type.endUser": "Koncový uživatel",
-    "interface.type.reports": "Zprávy",
+    "interface.type.reports": "Výstupy",
     "interface.type.orders": "Objednávky",
     "interface.type.invoices": "Faktury",
     "interface.type.other": "Ostatní"
