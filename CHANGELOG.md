@@ -2,6 +2,8 @@
 
 ## (IN PROGRESS)
 
+* *BREAKING*: Update `@folio/stripes` to `8.0.0`. Refs UIPFINT-33.
+
 ## [3.3.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v3.3.0) (2022-10-21)
 [Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v3.2.0...v3.3.0)
 
