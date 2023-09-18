@@ -1,6 +1,5 @@
-import React from 'react';
-import { render, act, screen, waitFor } from '@testing-library/react';
-import user from '@testing-library/user-event';
+import user from '@folio/jest-config-stripes/testing-library/user-event';
+import { render, act, screen } from '@folio/jest-config-stripes/testing-library/react';
 
 import FindInterfacesContainer from './FindInterfacesContainer';
 
@@ -66,9 +65,7 @@ describe('FindInterfacesContainer component', () => {
   it('should fetch more data', async () => {
     render(findInterfacesContainer(mutator));
 
-    await waitFor(() => {
-      user.click(screen.getByText('OnNeedMoreData'));
-    });
+    await user.click(screen.getByText('OnNeedMoreData'));
 
     expect(mockFetchMore).toHaveBeenCalledTimes(1);
   });
@@ -76,9 +73,7 @@ describe('FindInterfacesContainer component', () => {
   it('should update data', async () => {
     render(findInterfacesContainer(mutator));
 
-    await waitFor(() => {
-      user.click(screen.getByText('UpdateQuery'));
-    });
+    await user.click(screen.getByText('UpdateQuery'));
 
     expect(mutator.query.update).toHaveBeenCalled();
   });
