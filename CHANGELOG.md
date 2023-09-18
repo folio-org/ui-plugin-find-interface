@@ -4,6 +4,7 @@
 
 * Upgrade `Node.js` to `18` version in GitHub Actions. Refs UIPFINT-36.
 * **BREAKING:** Upgrade `React` to `18` version. Refs UIPFINT-35.
+* **BREAKING** Upgrade `react-intl` to `6` version. Refs UIPFINT-37.
 
 ## [4.0.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v4.0.0) (2023-02-17)
 [Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v3.3.0...v4.0.0)
