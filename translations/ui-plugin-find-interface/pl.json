@@ -10,7 +10,7 @@
     "interface.type.admin": "Administrator",
     "interface.type.endUser": "Użytkownik końcowy",
     "interface.type.reports": "Raporty",
-    "interface.type.orders": "Zamówienia zakupowe",
+    "interface.type.orders": "Zamówienia ",
     "interface.type.invoices": "Faktury",
     "interface.type.other": "Inny"
 }
