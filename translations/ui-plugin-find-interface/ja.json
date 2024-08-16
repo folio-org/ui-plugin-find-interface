@@ -4,13 +4,13 @@
     "interface.name": "名称",
     "interface.url": "URL",
     "interface.notes": "ノート",
-    "modal.title": "Add interfaces",
+    "modal.title": "インターフェイスの追加",
     "modal.totalSelected": "選択済合計： {count}",
     "interface.type": "種類",
     "interface.type.admin": "Admin",
     "interface.type.endUser": "End user",
     "interface.type.reports": "Reports",
     "interface.type.orders": "発注",
-    "interface.type.invoices": "Invoices",
+    "interface.type.invoices": "請求書",
     "interface.type.other": "その他"
 }
