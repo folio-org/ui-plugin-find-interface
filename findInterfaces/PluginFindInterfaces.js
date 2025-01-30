@@ -10,9 +10,20 @@ import {
 
 import FindInterfacesContainer from './FindInterfacesContainer';
 
-const PluginFindInterfaces = ({ addInterfaces, isMultiSelect, renderNewInterfaceBtn, ...rest }) => (
+const defaultSearchLabel = <FormattedMessage id="ui-plugin-find-interface.button.addInterface" />;
+
+const PluginFindInterfaces = ({
+  addInterfaces = noop,
+  isMultiSelect = true,
+  renderNewInterfaceBtn = noop,
+  disabled = false,
+  searchLabel = defaultSearchLabel,
+  ...rest
+}) => (
   <PluginFindRecord
     {...rest}
+    disabled={disabled}
+    searchLabel={searchLabel}
     selectRecordsCb={addInterfaces}
   >
     {(modalProps) => (
@@ -40,14 +51,6 @@ PluginFindInterfaces.propTypes = {
   addInterfaces: PropTypes.func,
   renderNewInterfaceBtn: PropTypes.func,
   isMultiSelect: PropTypes.bool,
-};
-
-PluginFindInterfaces.defaultProps = {
-  disabled: false,
-  searchLabel: <FormattedMessage id="ui-plugin-find-interface.button.addInterface" />,
-  addInterfaces: noop,
-  renderNewInterfaceBtn: noop,
-  isMultiSelect: true,
 };
 
 export default PluginFindInterfaces;
