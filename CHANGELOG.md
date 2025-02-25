@@ -1,9 +1,11 @@
 # Change history for ui-plugin-find-interface
 
-## (5.3.0 IN PROGRESS)
+## (6.0.0 IN PROGRESS)
 
 * React v19: refactor away from default props for functional components. Refs UIPFINT-41.
 * Migrate to shared GA workflows. Refs UIPFINT-44.
+* *BREAKING* Migrate stripes dependencies to their Sunflower versions. Refs UIPFINT-45.
+* *BREAKING* Migrate `react-intl` to v7. Refs UIPFINT-46.
 
 ## [5.2.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v5.2.0) (2024-10-30)
 [Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v5.1.0...v5.2.0)
