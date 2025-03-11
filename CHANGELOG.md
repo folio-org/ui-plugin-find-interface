@@ -1,6 +1,9 @@
 # Change history for ui-plugin-find-interface
 
-## (6.0.0 IN PROGRESS)
+## (6.1.0 IN PROGRESS)
+
+## [6.0.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v6.0.0) (2025-03-11)
+[Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v5.2.0...v6.0.0)
 
 * React v19: refactor away from default props for functional components. Refs UIPFINT-41.
 * Migrate to shared GA workflows. Refs UIPFINT-44.
