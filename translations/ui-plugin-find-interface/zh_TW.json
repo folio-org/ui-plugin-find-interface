@@ -5,7 +5,7 @@
     "interface.url": "URL",
     "interface.notes": "附註",
     "modal.title": "新增介面",
-    "modal.totalSelected": "已選總數：{count}",
+    "modal.totalSelected": "已選總數 : {count}",
     "interface.type": "類型",
     "interface.type.admin": "管理",
     "interface.type.endUser": "終端使用者",
