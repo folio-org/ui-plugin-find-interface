@@ -10,7 +10,7 @@
     "interface.type.admin": "المشرف",
     "interface.type.endUser": "المستخدم النهائي",
     "interface.type.reports": "التقارير",
-    "interface.type.orders": "طلبيات",
+    "interface.type.orders": "أوامر الشراء",
     "interface.type.invoices": "الفواتير",
     "interface.type.other": "أخرى"
 }
