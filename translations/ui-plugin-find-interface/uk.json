@@ -1,16 +1,16 @@
 {
     "button.addInterface": "Add interface",
     "meta.title": "Interfaces",
-    "interface.name": "Name",
+    "interface.name": "Ім'я/Назва",
     "interface.url": "URL",
-    "interface.notes": "Notes",
+    "interface.notes": "Примітки",
     "modal.title": "Add interfaces",
     "modal.totalSelected": "Total selected: {count}",
-    "interface.type": "Type",
-    "interface.type.admin": "Admin",
-    "interface.type.endUser": "End user",
-    "interface.type.reports": "Reports",
-    "interface.type.orders": "Orders",
-    "interface.type.invoices": "Invoices",
-    "interface.type.other": "Other"
+    "interface.type": "Тип",
+    "interface.type.admin": "Адміністратор",
+    "interface.type.endUser": "Кінцевий користувач",
+    "interface.type.reports": "Звіти",
+    "interface.type.orders": "Замовлення",
+    "interface.type.invoices": "Рахунки-фактури",
+    "interface.type.other": "Інше"
 }
