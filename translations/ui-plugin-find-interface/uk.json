@@ -10,7 +10,7 @@
     "interface.type.admin": "Адміністратор",
     "interface.type.endUser": "Кінцевий користувач",
     "interface.type.reports": "Звіти",
-    "interface.type.orders": "Замовлення",
+    "interface.type.orders": "Замовлення комплектування",
     "interface.type.invoices": "Рахунки-фактури",
     "interface.type.other": "Інше"
 }
