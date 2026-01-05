@@ -6,7 +6,7 @@
     "interface.notes": "ノート",
     "modal.title": "インターフェイスの追加",
     "modal.totalSelected": "選択済合計： {count}",
-    "interface.type": "種類",
+    "interface.type": "タイプ",
     "interface.type.admin": "管理者",
     "interface.type.endUser": "エンドユーザー",
     "interface.type.reports": "Reports",
