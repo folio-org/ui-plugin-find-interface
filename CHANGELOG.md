@@ -1,6 +1,11 @@
 # Change history for ui-plugin-find-interface
 
-## (6.1.0 IN PROGRESS)
+## 6.2.0 (IN PROGRESS)
+
+## [6.1.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v6.1.0) (2026-04-15)
+[Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v6.0.0...v6.1.0)
+
+* Translation updates.
 
 ## [6.0.0](https://github.com/folio-org/ui-plugin-find-interface/tree/v6.0.0) (2025-03-11)
 [Full Changelog](https://github.com/folio-org/ui-plugin-find-interface/compare/v5.2.0...v6.0.0)
